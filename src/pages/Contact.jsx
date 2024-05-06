@@ -74,6 +74,10 @@ export default function Contact() {
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
+      <h3>
+        Email: tcampbell_93@hotmail
+        Phone: (661) 972-0295
+      </h3>
     </div>
   )
 }
