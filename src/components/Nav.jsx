@@ -16,7 +16,7 @@ export default function Nav() {
             <li className="nav-item">
                 <Link
                     to="/Resume"
-                    className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+                    className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
                 >
                     Resume
                 </Link>
@@ -24,7 +24,7 @@ export default function Nav() {
             <li className="nav-item">
                 <Link
                     to="/Portfolio"
-                    className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+                    className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
                 >
                     Portfolio
                 </Link>
@@ -32,7 +32,7 @@ export default function Nav() {
             <li className="nav-item">
                 <Link
                     to="/Contact"
-                    className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+                    className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
                 >
                     Contact Me
                 </Link>
