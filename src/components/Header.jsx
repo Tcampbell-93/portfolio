@@ -1,1 +1,2 @@
-import Navigation from './Navigation';
+import Nav from './NavTabs';
+
