@@ -1,6 +1,8 @@
+import Tyler from '../images/Tyler.jpg'
+
 export default function About() {
     return (
-      <div>
+      <div className="container">
         <h1>About Me</h1>
         <p>
           Hi, my name is Tyler Campbell. I am an aspiriing full stack software engineer. 
@@ -15,6 +17,7 @@ export default function About() {
           
           - Tyler Campbell
         </p>
+        <img src={Tyler} alt='Tyler' className='profile-pic' />
       </div>
     );
   }

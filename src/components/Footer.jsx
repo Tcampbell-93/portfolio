@@ -1,28 +1,35 @@
-import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
     return (
         <ul className="footer footer-tabs">
             <li className="footer-item">
-                <Link
-                    to="https://github.com/Tcampbell-93"
+                <a
+                    href="https://github.com/Tcampbell-93"
                     className="github-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Github
-                </Link>
-                <Link
-                    to="https://www.linkedin.com/in/tyler-campbell-9301212b6/"
+                    <FontAwesomeIcon icon={faGithub} /> Github
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/tyler-campbell-9301212b6/"
                     className="linkedIn-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    LinkedIn
-                </Link>
-                <Link
-                    to="https://www.facebook.com/tyler.campbell.5264382"
+                    <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+                </a>
+                <a
+                    href="https://www.facebook.com/tyler.campbell.5264382"
                     className="facebook-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Facebook
-                </Link>
+                    <FontAwesomeIcon icon={faFacebook} /> Facebook
+                </a>
             </li>
         </ul>
-    )
+    );
 }

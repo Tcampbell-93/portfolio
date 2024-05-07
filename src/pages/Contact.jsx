@@ -8,39 +8,38 @@ export default function Contact() {
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+    const { name, value } = e.target;
 
-    // Based on the input type, we set the state of either email, name, and message
-    if (inputType === 'email') {
-      setEmail(inputValue);
-    } else if (inputType === 'name') {
-      setName(inputValue);
+    if (name === 'email') {
+      setEmail(value);
+    } else if (name === 'name') {
+      setName(value);
     } else {
-      setMessage(inputValue);
+      setMessage(value);
     }
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    if (!validateEmail) {
+    if (!validateEmail(email)) {
       setErrorMessage('Please enter a valid email address.');
       return;
     }
     if (!name) {
-      setErrorMessage('Must contain your name.');
+      setErrorMessage('Name is required.');
       return;
     }
     if (!message) {
-      setErrorMessage('Must contain a message.')
+      setErrorMessage('Message is required.');
+      return;
     }
 
+    // Reset form fields and error message on successful form submission
     setEmail('');
     setName('');
     setMessage('');
+    setErrorMessage('');
   };
 
   return (
@@ -51,7 +50,7 @@ export default function Contact() {
           name='email'
           onChange={handleInputChange}
           type='email'
-          placeholer='Email'
+          placeholder='Email'
         />
         <input
           value={name}
@@ -67,17 +66,17 @@ export default function Contact() {
           type="text"
           placeholder="Message"
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn-submit">Submit</button>
       </form>
       {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
         </div>
       )}
-      <h3>
-        Email: tcampbell_93@hotmail
-        Phone: (661) 972-0295
-      </h3>
+      <div>
+        <h3>Email: tcampbell_93@hotmail.com</h3>
+        <h3>Phone: (661) 972-0295</h3>
+      </div>
     </div>
-  )
+  );
 }
