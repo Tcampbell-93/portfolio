@@ -1,4 +1,5 @@
 const Resume = () => {
+  // creating a button for a resume to be downloaded and adding list of languages I am proficient in
     return (
       <div className="container">
         <h2>Resume</h2>

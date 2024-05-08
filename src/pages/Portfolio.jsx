@@ -9,6 +9,7 @@ import readme from "../images/readme-generator.png"
 
 
 export default function Portfolio() {
+    //create an array of the projects to be passed down later to the project component as props
     const projectList = [
         {
             id: 1,
@@ -53,6 +54,7 @@ export default function Portfolio() {
             image: readme
         },
     ];
+
     return (
         <Project projectList={projectList} />
     )

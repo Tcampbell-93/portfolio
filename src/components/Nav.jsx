@@ -1,11 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 
+// nav component
 export default function Nav() {
     const currentPage = useLocation().pathname;
 
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
+                {/* setting up links to the 4 separate pages with the about me as the home page */}
                 <Link
                     to="/"
                     className={currentPage === '/' ? 'nav-link active' : 'nav-link'}

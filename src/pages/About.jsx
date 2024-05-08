@@ -1,5 +1,6 @@
 import Tyler from '../images/Tyler.jpg'
 
+// simple about me page with a open introduction
 export default function About() {
     return (
       <div className="container">
@@ -17,6 +18,7 @@ export default function About() {
           
           - Tyler Campbell
         </p>
+        {/* adding an image of me for the page */}
         <img src={Tyler} alt='Tyler' className='profile-pic' />
       </div>
     );
