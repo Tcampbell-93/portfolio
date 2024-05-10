@@ -1,9 +1,11 @@
+import resume from '../pdfs/resume.pdf'
+
 const Resume = () => {
   // creating a button for a resume to be downloaded and adding list of languages I am proficient in
     return (
       <div className="container">
         <h2>Resume</h2>
-        <a href="../pdfs/resume.pdf" download className="resume-link">
+        <a href={resume} download className="resume-link">
           Downloadable Resume coming soon
         </a>
         <h3>Proficiencies:</h3>
