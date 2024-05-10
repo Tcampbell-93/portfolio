@@ -6,7 +6,7 @@ const Resume = () => {
       <div className="container">
         <h2>Resume</h2>
         <a href={resume} download className="resume-link">
-          Downloadable Resume coming soon
+          Downloadable a copy of my Resume
         </a>
         <h3>Proficiencies:</h3>
         <ul className="proficiencies-list">
